@@ -22,7 +22,10 @@ html
 					span#inputIDUpdate
 					button.btn.btn-default(onclick='UpdateData();') Save
 					button.btn.btn-default(onclick='resetForm();') Cancel
-				button#btnAdd.btn.btn-default(onclick='addData();') Add
+				span#btnAdd
+					button.btn.btn-default(onclick='addData();') Add
+					button.btn.btn-default(onclick='resetForm();') Reset
+					button.btn.btn-default(onclick='deleteList();') Delete List
 			#errors
 			table.table
 				thead
