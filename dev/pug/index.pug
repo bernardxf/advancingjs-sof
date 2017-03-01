@@ -10,6 +10,14 @@ html
 				.navbar-header
 					a#navTitle.navbar-brand(href='index.html')
 		.container-fluid
+			.form-inline
+				.form-group
+					input#desc.form-control(type='text', placeholder='Description')
+				.form-group
+					input#amount.form-control(type='text', placeholder='Amount')
+				.form-group
+					input#value.form-control(type='text', placeholder='Value')
+				button.btn.btn-default(onclick='addData();') Add
 			table.table
 				thead
 					tr
