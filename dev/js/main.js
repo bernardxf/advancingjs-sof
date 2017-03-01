@@ -9,7 +9,7 @@ function getTotal(list){
 	for(var key in list) {
 		total += list[key].value * list[key].amount;
 	}
-	return total;
+	document.getElementById('totalValue').innerHTML = formatValue(total);
 }
 
 function setList(list){
@@ -18,6 +18,7 @@ function setList(list){
 		table += '<tr><td>'+ formatDesc(list[key].desc) +'</td><td>'+ formatAmount(list[key].amount) +'</td><td>'+ formatValue(list[key].value) +'</td><td><button class="btn btn-default"onclick="setUpdate('+ key +');">Edit</button> <button class="btn btn-default"onclick="deleteData('+ key +');">Delete</button></td></tr>';
 	}
 	document.getElementById('listTable').innerHTML = table;
+	getTotal(list);
 }
 
 function formatDesc(desc){
