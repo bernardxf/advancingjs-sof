@@ -12,4 +12,13 @@ function getTotal(list){
 	return total;
 }
 
-console.log(getTotal(list));
+function setList(list){
+	var table = '';
+	for(var key in list) {
+		table += '<tr><td>'+list[key].desc+'</td><td>'+list[key].amount+'</td><td>'+list[key].value+'</td><td> Edit | Delete</td></tr>';
+	}
+	document.getElementById('listTable').innerHTML = table;
+}
+
+setList(list);
+

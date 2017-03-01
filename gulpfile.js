@@ -20,7 +20,7 @@ gulp.task('stylus', function () {
 });
 
 gulp.task('copyJS', function() {
-	return gulp.src('dev/js/**/*')
+	return gulp.src('dev/js/*.js')
 		.pipe(copy())
 		.pipe(gulp.dest(destino+'js/'));
 });
